@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:background="#958787">
+
+        <Button
+            android:id="@+id/menu1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/menu_btn"
+            android:fontFamily="@font/galmuri"
+            android:gravity="center"
+            android:shadowColor="#FEFFFC"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="강화화면"
+            android:textColor="@color/menu_btn"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/menu2"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="DuplicateClickableBoundsCheck" />
+
+        <Button
+            android:gravity="center"
+            android:background="@drawable/menu_btn"
+            android:id="@+id/menu2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toEndOf="@id/menu1"
+            app:layout_constraintEnd_toStartOf="@id/menu3"
+            android:shadowColor="#FEFFFC"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="인벤토리"
+            android:textSize="24sp"
+            android:textColor="@color/menu_btn"
+            android:fontFamily="@font/galmuri"/>
+
+        <Button
+            android:gravity="center"
+            android:background="@drawable/menu_btn"
+            android:id="@+id/menu3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toEndOf="@id/menu2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:shadowColor="#FEFFFC"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="뭔지모름"
+            android:textSize="24sp"
+            android:textColor="@color/menu_btn"
+            android:fontFamily="@font/galmuri"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:background="@color/black"
+        android:gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintTop_toBottomOf="@id/constraintlayout"
+        app:layout_constraintBottom_toTopOf="@id/mainimg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="무기 강화하기"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/galmuri"/>
+
+    <ImageView
+        android:id="@+id/mainimg"
+        android:src="@drawable/bat"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/constraintlayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/itemname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/mainimg"
+        app:layout_constraintBottom_toTopOf="@id/act_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="효자손 +1"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/galmuri"/>
+
+    <Button
+        android:id="@+id/act_btn"
+        android:text="강화하기"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/act_btn"
+        android:shadowColor="#FEFFFC"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/galmuri"
+        app:layout_constraintTop_toBottomOf="@id/mainimg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
